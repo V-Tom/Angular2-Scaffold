@@ -1,0 +1,48 @@
+.net-ease-music {
+  .suggest-search-result {
+    width: 250px;
+    height: auto;
+    overflow-x: auto;
+    border: 1px solid #cccccc;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px 5px;
+      margin: 5px;
+      border-bottom: 1px solid #cccccc;
+      &:last-of-type {
+        border-bottom: none;
+      }
+      p {
+        span {
+          font-size: 12px;
+          color: #000000;
+        }
+        .duration {
+          color: #f00;
+          font-size: 12px;
+        }
+        .name {
+          color: #47bfa2;
+          font-size: 14px;
+        }
+        b {
+          font-size: 12px;
+          font-weight: bold;
+          color: #000000;
+        }
+        .artistName {
+          color: #1543fa;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  video {
+    width: 230px*1.618;
+    height: 230px;
+    object-fit: fill;
+  }
+}

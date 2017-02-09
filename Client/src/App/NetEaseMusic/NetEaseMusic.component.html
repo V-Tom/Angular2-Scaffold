@@ -1,0 +1,24 @@
+<div class="net-ease-music">
+    <label>
+        <input type="text" #suggestSearchBox (keyup)="suggestSearch(suggestSearchBox.value)"/>
+    </label>
+    <div *ngIf="suggestSearchResult.length">
+        <p>搜索 "{{this.suggestSearchKey}}" 结果是:</p>
+        <ul class="suggest-search-result">
+            <li
+                    *ngFor="let item of suggestSearchResult; let i = index;"
+                    (click)="playMv(item.id)"
+            >
+                <p>
+                    <b>
+                        <small>id：</small>
+                        {{item.id}}</b>
+                    <span class="name"><small>名称：</small>{{item.name}}</span>
+                    <span class="artistName"><small>作者：</small>{{item.artistName}}</span>
+                    <span class="duration"><small>时长：</small>{{item.duration}}</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <video *ngIf="mvUrl" [src]="mvUrl" autoplay loop controls></video>
+</div>
